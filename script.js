@@ -1,6 +1,5 @@
 (function () {
-  // ⚠️ Update this once the Render service is live — see README for the exact steps.
-  const API_BASE = 'https://registro-salidas-api.onrender.com';
+  const API_BASE = 'https://fidelitypasscard44.onrender.com';
 
   const TOKEN_KEY = 'rs_token';
   const el = id => document.getElementById(id);

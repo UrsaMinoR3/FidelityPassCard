@@ -22,7 +22,7 @@ https://ursaminor3.github.io/FidelityPassCard/
    |---|---|
    | `DATABASE_URL` | the Neon connection string from step 1 |
    | `JWT_SECRET` | any long random string |
-4. Deploy. Render will build the Docker image and give you a live URL like `https://registro-salidas-api.onrender.com`.
+4. Deploy. Render will build the Docker image and give you a live URL like `https://fidelitypasscard44.onrender.com`.
 5. Open `script.js` in this repo and update the `API_BASE` constant at the top to that exact URL, then commit/push — GitHub Pages picks it up automatically.
 
 From then on: **push to `main` → Render auto-redeploys the backend, GitHub Pages auto-redeploys the frontend.** No manual deploy steps, ever.
