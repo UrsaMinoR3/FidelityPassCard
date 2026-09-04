@@ -4,24 +4,24 @@
 }
 
 :root{
-  --page-bg: #0B0B0F;
+  --page-bg: #edb1f1;
   --card-bg: #FFFFFF;
   --ink: #17181C;
   --ink-muted: #7B7E87;
-  --accent: #7FD1D6;
-  --accent-deep: #3E8B90;
+  --accent: #E38FC0;
+  --accent-deep: #C0498F;
   --star-empty: #D9DCE1;
-  --star-filled: #FFC94D;
-  --banner-a: #8FCBEA;
-  --banner-b: #5FA8D3;
+  --star-filled: #C0498F;
+  --banner-a: #F6C9EE;
+  --banner-b: #DE8FD8;
   --good: #33A467;
-  --shadow: 0 20px 50px -20px rgba(0,0,0,.6);
+  --shadow: 0 20px 50px -20px rgba(120,20,90,.35);
 }
 
 *{box-sizing:border-box; -webkit-tap-highlight-color: transparent;}
 html,body{margin:0;height:100%;}
 body{
-  background: radial-gradient(circle at 50% -10%, #1C1D24 0%, var(--page-bg) 55%);
+  background: radial-gradient(circle at 50% -10%, #f7cdfa 0%, var(--page-bg) 55%);
   color:var(--ink);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display:flex;
@@ -106,7 +106,7 @@ body{
   cursor:pointer;
   transition: transform .12s ease, background .2s ease;
 }
-.log-btn:active{transform:scale(.97); background:#336F73;}
+.log-btn:active{transform:scale(.97); background:#A03876;}
 
 .card-foot{
   display:flex;justify-content:center;gap:22px;
@@ -118,7 +118,7 @@ body{
   padding:6px 4px;text-decoration:underline;text-underline-offset:3px;
 }
 
-.hint{color:#8B8D97;font-size:12px;text-align:center;margin:0;padding:0 12px;}
+.hint{color:#7A3B63;font-size:12px;text-align:center;margin:0;padding:0 12px;}
 
 .toast{
   position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);

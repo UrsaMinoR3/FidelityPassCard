@@ -43,7 +43,7 @@
     for (let i = 0; i < STAMPS_PER_CARD; i++) {
       const div = document.createElement('div');
       div.className = 'stamp' + (i < progress ? ' filled' : '');
-      div.innerHTML = '<span class="glyph">' + (i < progress ? '★' : '☆') + '</span>';
+      div.innerHTML = '<span class="glyph">' + (i < progress ? '💗' : '🤍') + '</span>';
       el.stampGrid.appendChild(div);
     }
   }
