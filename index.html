@@ -4,21 +4,77 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
 <meta name="theme-color" content="#edb1f1">
-<title>FidelityPassCard</title>
+<title>Registro Salidas</title>
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💗</text></svg>">
 </head>
 <body>
   <div class="page">
-    <div class="card" id="card">
+
+    <!-- ===== AUTH ===== -->
+    <section class="card" id="view-auth" hidden>
       <div class="card-top">
-        <div class="brand">
-          <span class="brand-mark">💗</span>
-          <span class="brand-name">Registro Salidas</span>
+        <div class="brand"><span class="brand-mark">💗</span><span class="brand-name">Registro Salidas</span></div>
+      </div>
+      <div class="auth-body">
+        <div class="auth-tabs">
+          <button class="auth-tab active" id="tabLogin" type="button">Entrar</button>
+          <button class="auth-tab" id="tabSignup" type="button">Crear cuenta</button>
         </div>
+
+        <form id="loginForm" class="auth-form">
+          <label>Usuario o correo</label>
+          <input type="text" id="loginIdentifier" required autocomplete="username">
+          <label>Contraseña</label>
+          <input type="password" id="loginPassword" required autocomplete="current-password">
+          <button type="submit" class="log-btn">Entrar</button>
+        </form>
+
+        <form id="signupForm" class="auth-form" hidden>
+          <div class="form-row">
+            <div><label>Nombre</label><input type="text" id="suName" required></div>
+            <div><label>Apellido</label><input type="text" id="suLastName" required></div>
+          </div>
+          <label>Usuario</label>
+          <input type="text" id="suUsername" required pattern="[a-zA-Z0-9_.]+" autocomplete="username">
+          <label>Correo</label>
+          <input type="email" id="suEmail" required autocomplete="email">
+          <label>Contraseña</label>
+          <input type="password" id="suPassword" required minlength="6" autocomplete="new-password">
+          <button type="submit" class="log-btn">Crear cuenta</button>
+        </form>
+
+        <p class="auth-note" id="joinNote" hidden>Al entrar te unirás automáticamente al grupo de la invitación 💌</p>
+        <div id="authStatus" class="status-msg"></div>
+      </div>
+    </section>
+
+    <!-- ===== GROUPS LIST ===== -->
+    <section class="card" id="view-groups" hidden>
+      <div class="card-top">
+        <div class="brand"><span class="brand-mark">💗</span><span class="brand-name">Registro Salidas</span></div>
+        <button class="icon-btn" id="logoutBtn" title="Cerrar sesión">⎋</button>
+      </div>
+      <div class="groups-body">
+        <p class="hello" id="helloMsg"></p>
+        <div id="groupsList" class="groups-list"></div>
+
+        <form id="createGroupForm" class="auth-form">
+          <label>Nombre del grupo</label>
+          <input type="text" id="newGroupName" placeholder="Ej: Yo y Lorena" required>
+          <button type="submit" class="log-btn">+ Crear grupo</button>
+        </form>
+        <div id="groupsStatus" class="status-msg"></div>
+      </div>
+    </section>
+
+    <!-- ===== GROUP / STAMP CARD ===== -->
+    <section class="card" id="view-group" hidden>
+      <div class="card-top">
+        <button class="icon-btn" id="backBtn" title="Volver">←</button>
         <div class="cliente">
-          <span class="cliente-lbl">CLIENTE</span>
-          <span class="cliente-name" id="clienteName" role="button" tabindex="0">Editar nombre</span>
+          <span class="cliente-lbl">GRUPO</span>
+          <span class="cliente-name" id="groupName">—</span>
         </div>
       </div>
 
@@ -42,12 +98,14 @@
       <button class="log-btn" id="logBtn">+ Registrar salida</button>
 
       <div class="card-foot">
-        <button class="ghost-btn" id="editBtn">Editar nombre</button>
-        <button class="ghost-btn" id="resetBtn">Reiniciar</button>
+        <button class="ghost-btn" id="iconBtn">Cambiar ícono</button>
+        <button class="ghost-btn" id="inviteBtn">Copiar invitación</button>
       </div>
-    </div>
 
-    <p class="hint">Guardado en este dispositivo · toca “+ Registrar salida” cada vez que salgan</p>
+      <div class="members-row" id="membersRow"></div>
+    </section>
+
+    <p class="hint">Registro Salidas · guardado en la nube, compartido con tu grupo</p>
   </div>
 
   <div class="toast" id="toast"></div>
