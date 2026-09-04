@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<meta name="theme-color" content="#0B0B0F">
+<title>FidelityPassCard</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⭐</text></svg>">
+</head>
+<body>
+  <div class="page">
+    <div class="card" id="card">
+      <div class="card-top">
+        <div class="brand">
+          <span class="brand-mark">☕</span>
+          <span class="brand-name">Salidas</span>
+        </div>
+        <div class="cliente">
+          <span class="cliente-lbl">CLIENTE</span>
+          <span class="cliente-name" id="clienteName" role="button" tabindex="0">Editar nombre</span>
+        </div>
+      </div>
+
+      <div class="banner" id="banner">
+        <div class="stamp-grid" id="stampGrid"></div>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-lbl">SALIDAS TOTALES</span>
+          <span class="stat-val" id="totalVal">0</span>
+        </div>
+        <div class="stat stat-right">
+          <span class="stat-lbl">COMPLETADAS</span>
+          <span class="stat-val" id="completedVal">0</span>
+        </div>
+      </div>
+
+      <div class="progress-note" id="progressNote">0 / 10 para la próxima tarjeta</div>
+
+      <button class="log-btn" id="logBtn">+ Registrar salida</button>
+
+      <div class="card-foot">
+        <button class="ghost-btn" id="editBtn">Editar nombre</button>
+        <button class="ghost-btn" id="resetBtn">Reiniciar</button>
+      </div>
+    </div>
+
+    <p class="hint">Guardado en este dispositivo · toca “+ Registrar salida” cada vez que salgan</p>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
