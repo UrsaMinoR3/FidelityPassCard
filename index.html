@@ -53,12 +53,22 @@
     <section class="card" id="view-groups" hidden>
       <div class="card-top">
         <div class="brand"><span class="brand-mark">💗</span><span class="brand-name">Registro Salidas</span></div>
-        <button class="icon-btn" id="logoutBtn" title="Cerrar sesión">⎋</button>
       </div>
+
+      <div class="profile-hub">
+        <div class="profile-avatar" id="profileAvatar">?</div>
+        <div class="profile-info">
+          <span class="profile-name" id="profileName">—</span>
+          <span class="profile-username" id="profileUsername">—</span>
+        </div>
+        <button class="logout-btn" id="logoutBtn">Salir</button>
+      </div>
+
       <div class="groups-body">
-        <p class="hello" id="helloMsg"></p>
+        <div class="section-lbl">Tus grupos</div>
         <div id="groupsList" class="groups-list"></div>
 
+        <div class="section-lbl">Crear un grupo nuevo</div>
         <form id="createGroupForm" class="auth-form">
           <label>Nombre del grupo</label>
           <input type="text" id="newGroupName" placeholder="Ej: Yo y Lorena" required>

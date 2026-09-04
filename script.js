@@ -138,7 +138,9 @@
     statusEl.textContent = '';
     try {
       const me = await api('/auth/me');
-      el('helloMsg').textContent = 'Hola, ' + me.name + ' 💗';
+      el('profileAvatar').textContent = (me.name || '?').trim().charAt(0).toUpperCase();
+      el('profileName').textContent = me.name + ' ' + me.last_name;
+      el('profileUsername').textContent = '@' + me.username;
       const groups = await api('/groups/mine');
       renderGroupsList(groups);
     } catch (err) {
